@@ -1,0 +1,41 @@
+       #intro {
+        background-image: url("https://i.ibb.co/H2cbZs1/ancientfamily.jpg");
+		height: 100vh;
+		background-position: center;
+		background-size: cover;
+      }
+
+      /* Height for devices larger than 576px */
+      @media (min-width: 992px) {
+        #intro {
+          margin-top: -58.59px;
+        }
+      }
+
+      .navbar .nav-link {
+        color: black !important;
+		font-size: 35px;
+      }
+	  
+	  .text-white{
+		  
+		  background-color: rgba(0, 0, 0, 0.8);
+		  padding-left: 25px;
+		  padding-top: 25px;
+		  padding-right: 25px;
+		  padding-bottom: 25px;
+		  
+	  }
+	  
+	  .navbar-nav > li{
+	    padding-left:30px;
+	    padding-right:30px;
+		
+	  }
+	  
+	  .navbar-brand{
+		margin-left: 30px;  
+	  }
+
+// Import Bootstrap v5  
+@import "~bootstrap/scss/bootstrap";  
