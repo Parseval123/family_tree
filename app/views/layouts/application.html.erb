@@ -29,10 +29,8 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Contatti</a>
       </li>
-	   <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a></li>
-       <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-instagram"></i></a></li>
-       <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-twitter"></i></a></li>
-       <li class="nav-item"><a class="nav-link" href="#"><i class="fab fa-pinterest-p"></i></a></li>
+	   <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/groups/chissdaquin/"><i class="fab fa-facebook-f"></i></a></li>
+       <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/chissdaquin/"><i class="fab fa-instagram"></i></a></li>
 	    <% if user_signed_in? %>
 		 <li> <%= link_to "signout", destroy_user_session_path, method: :delete, :class => "btn btn-outline-dark btn-lg m-2" %></li>
 		<% end %>
