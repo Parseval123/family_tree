@@ -23,16 +23,18 @@
 	 }
 	  
 	  .nav-link {
-		text-align: justify;
+		text-align: justify-center;
 		color: black !important;
 		font-size: 25px !important;
 	  }
 	  
-	  nav.navbar{
+	/*  nav.navbar{
 		  
 		justify-content: space-evenly;  
 	
-	  }
+	  }*/
+	  
+
 	  
 	  .navbar-brand{
 		text-align: justify;
@@ -52,14 +54,14 @@
 	  }
 	  
 	  .navbar-nav > li{
+	
+		margin-left: 20px;
 	    padding-left:15px;
 	    padding-right:15px;
-		
-		
 	  }
 	  
 	  .navbar-brand{
-		margin-left: 15px;  
+		margin-left: 5px;  
 	  }
 	  
 	  /* footer */
