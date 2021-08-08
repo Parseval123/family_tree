@@ -1,6 +1,6 @@
        #intro {
         background-image: url("https://i.ibb.co/H2cbZs1/ancientfamily.jpg");
-		height: 100vh;
+		height: 90vh;
 		background-position: center;
 		background-size: cover;
       }
@@ -31,10 +31,11 @@
 	  nav.navbar{
 		  
 		justify-content: space-evenly;  
-		  
+	
 	  }
 	  
 	  .navbar-brand{
+		text-align: justify;
 		font-family: MedievalSharp;
 		font-weight: bold;
 		font-size: 50px;		
@@ -63,7 +64,7 @@
 	  
 	  /* footer */
 		footer {
-			margin-top: 45px;
+			margin-top: 5px;
 			padding-top: 5px;
 			border-top: 1px solid #eaeaea;
 			color: #777;
