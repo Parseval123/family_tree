@@ -1,16 +1,16 @@
        #intro {
         background-image: url("https://i.ibb.co/H2cbZs1/ancientfamily.jpg");
-		height: 90vh;
+		height: 100vh;
 		background-position: center;
 		background-size: cover;
       }
 
-      /* Height for devices larger than 576px */
+      /* Height for devices larger than 576px 
       @media (min-width: 992px) {
         #intro {
           margin-top: -58.59px;
         }
-      }
+      }*/
 	  
 	  a:-webkit-any-link {
  
@@ -21,27 +21,6 @@
      a#linkface{
 		 color:red
 	 }
-	  
-	  .nav-link {
-		text-align: justify-center;
-		color: black !important;
-		font-size: 25px !important;
-	  }
-	  
-	/*  nav.navbar{
-		  
-		justify-content: space-evenly;  
-	
-	  }*/
-	  
-
-	  
-	  .navbar-brand{
-		text-align: justify;
-		font-family: MedievalSharp;
-		font-weight: bold;
-		font-size: 50px;		
-	  }
 	  
 	  .text-white{
 		  
@@ -56,39 +35,64 @@
 	  .navbar-nav > li{
 	
 		margin-left: 20px;
-	    padding-left:15px;
-	    padding-right:15px;
+	    padding-left:5px;
+	    padding-right:5px;
+		text-align: justify-center;
+		color: black!important;
+		font-size: 20px;
 	  }
+
+	  .navbar-light .navbar-nav .nav-link {
+         color: black; 
+	   }
 	  
 	  .navbar-brand{
-		margin-left: 5px;  
+		text-align: justify;
+		font-family: MedievalSharp;
+		font-weight: bold;
+		font-size: 50px;
+		margin-left: 5px;		
 	  }
 	  
-	  /* footer */
-		footer {
-			margin-top: 5px;
-			padding-top: 5px;
-			border-top: 1px solid #eaeaea;
-			color: #777;
-		}
-		footer a {
-			color: #555;
-		}
-		footer a:hover {
-			color: #222;
-		}
-		footer small {
-			float: left;
-		}
-		footer ul {
-			float: right;
-			list-style: none;
-		}
-		footer ul li {
-			float: left;
-			margin-left: 15px;
-		}
+	  
+	  /*  nav.navbar{
+		  
+		justify-content: space-evenly;  
+	
+	  }*/
+	  
+	 
 
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 58px 0 0; /* Height of navbar */
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+  width: 240px;
+  z-index: 600;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+.sidebar .active {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
 
 // Import Bootstrap v5  
 @import "~bootstrap/scss/bootstrap";  
