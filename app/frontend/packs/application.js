@@ -6,6 +6,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require popper
 //= require turbolinks
 //= require_tree .
 
@@ -15,8 +16,12 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import '../js/bootstrap_js_files.js' 
 import "@fortawesome/fontawesome-free/js/all";
-
+import 'core-js/stable'
+import 'regenerator-runtime/runtime'
+import "chartkick/chart.js"
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+
