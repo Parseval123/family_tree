@@ -12,10 +12,11 @@
     }
 }
 	  
-	  a:-webkit-any-link {
+	a:-webkit-any-link {
  
     text-decoration: none;
 	color: black;
+	
 }
 
      a#linkface{
@@ -34,7 +35,7 @@
 	  
 	  
 	  .nav-item{
-		  padding-left:15px;
+		  padding-left:15px!important;
 	  }
 
 /* Sidebar */
