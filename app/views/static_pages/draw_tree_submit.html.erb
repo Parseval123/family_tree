@@ -4,14 +4,17 @@
 <h5> Inserisci il nome e il cognome nel formato Nome Cognome (iniziali in maiuscolo) per iniziare la ricerca. Ad esempio Flavio Forlini.  </h5>		   
          </div>
 	
-
-
+<p id="notice"><%= notice %></p>
+<div class="justify-items-center">
 <%= form_tag(static_pages_draw_tree_render_path, :method => :post) do%>
   <div class="field">
     <%= label_tag "Inserisci qui il nome completo del soggetto della ricerca" %><br>
-    <%= text_field_tag :fullname, class: "form-control" %>
+    <%= text_field_tag :fullname, class: "form-control" %> </br>
+	<%= label_tag "Indica il numero massimo di generazioni da esplorare" %><br>
+	<%= number_field_tag :generation_length, @current_value, min: 1, max: 7, :step => 'any', class: "number", placeholder: @hint_value %>
   </div>
   <div class="actions">
     <%= submit_tag "Submit", class: "btn btn-primary"  %>
   </div>
 <%end%>
+</div>

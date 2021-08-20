@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'static_pages/shop'
   get 'static_pages/draw_tree_submit'
   post 'static_pages/draw_tree_render'
-  
+  get 'static_pages/draw_tree_render' => 'static_pages/draw_tree_submit'
   # routes for elders 
   get 'static_pages/vincenzo_tomassi'
   
