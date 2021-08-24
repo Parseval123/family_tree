@@ -1,0 +1,55 @@
+   <aside class="col-sm-3 flex-grow-sm-1 flex-shrink-1 flex-grow-0 pb-sm-0 pb-3">
+            <div class="bg-light border rounded-3 p-1 h-100">
+                <ul class="nav flex-sm-column flex-row mb-auto justify-content-center" aria-expanded="false">
+					
+					
+					
+					<% @posts.each do |post| %>	
+					<li>
+						<% if (post.family==false) %> 	
+										<button type="button" class="btn bg-transparent">
+										<li><%= link_to "#{post.title.to_s}", post_path(:id => post.id.to_i) %></li>
+										</button>	
+						<% end %>
+					</li>
+					<% end %>
+					
+					
+					
+					<!-- <li>
+					  <button type="button" class="btn bg-transparent dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+						Chiss Mirena
+					  </button>
+					  <ul class="dropdown-menu">
+						<li><a class="dropdown-item">Albero Genealogico</a></li>
+						<li><hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item"><%= link_to "QR Vincenzo Tomassi", static_pages_vincenzo_tomassi_path %></a></li>
+					  </ul>
+					  </br>
+					</li> -->
+					
+					<li>
+						<% @families.each do |family_soprannome| %>
+							<button type="button" class="btn bg-transparent dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+								<%= family_soprannome %>
+							</button>
+						
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item">Albero Genealogico</a></li>
+									<li><hr class="dropdown-divider"></li>
+								<% @posts.each do |post| %>
+									
+									<% if (family_soprannome==post.family_name.to_s and post.family==true) %> 	
+										<li><a class="dropdown-item"><%= link_to "#{post.title.to_s}", post_path(:id => post.id.to_i) %></a></li>
+									 <% end %>
+									 
+								<% end %>
+								</ul>
+								</br>
+						<% end %>
+					 
+					</li>
+					
+                </ul>
+            </div>
+        </aside>

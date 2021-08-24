@@ -3,64 +3,15 @@
 
 <header class="py-3 mb-4 border-bottom shadow">
     <div class="container-fluid align-items-center d-flex ">
-        <div class="flex-grow-1 d-flex align-items-center">
-            <div class="flex-shrink-0 dropdown">
-                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://i.ibb.co/MkPBTnd/Whats-App-Image-2021-08-05-at-11-17-04.jpg" alt="user" width="50" height="50">
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-				    <li><a class="dropdown-item"><%= link_to "Torna ai progetti", static_pages_projects_path %></a></li>
-					<li><a class="dropdown-item" href="#">QR Bunker</a></li>
-					<li class="dropdown-submenu">
-						<a class="dropdown-item dropdown-toggle" href="#">Chiss Mirena</a>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#">Albero Genealogico</a></li>
-								<li><hr class="dropdown-divider"></li>
-								<li><a class="dropdown-item"><%= link_to "QR Vincenzo Tomassi", static_pages_vincenzo_tomassi_path %></a></li>
-								<li class="dropdown-submenu">
-									<a class="dropdown-item dropdown-toggle" href="#">Subsubmenu</a>
-										<ul class="dropdown-menu">
-										  <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
-										  <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
-										</ul>
-								</li>
-								<li class="dropdown-submenu">
-								<a class="dropdown-item dropdown-toggle" href="#">Second subsubmenu</a>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
-									<li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
-							</ul>
-					</li>
-				</ul>
-            </div>
+       
     </div>
 </header>
+
 <div class="container-fluid pb-3 flex-grow-1 d-flex flex-column flex-sm-row overflow-auto">
     <div class="row flex-grow-sm-1 flex-grow-0">
-        <aside class="col-sm-3 flex-grow-sm-1 flex-shrink-1 flex-grow-0 pb-sm-0 pb-3">
-            <div class="bg-light border rounded-3 p-1 h-100">
-                <ul class="nav flex-sm-column flex-row mb-auto justify-content-between text-truncate">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-truncate">
-                           
-                            <span class="d-none d-sm-inline">QR Bunker</span>
-                        </a>
-                    </li>				 
-					<li>
-			
-					  <button type="button" class="btn bg-transparent dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-						Chiss Mirena
-					  </button>
-					  <ul class="dropdown-menu">
-						<li><a class="dropdown-item">Albero Genealogico</a></li>
-						<li><hr class="dropdown-divider"></li>
-						<li><a class="dropdown-item"><%= link_to "QR Vincenzo Tomassi", static_pages_vincenzo_tomassi_path %></a></li>
-						
-					  </ul>
-					</li>
-                </ul>
-            </div>
-        </aside>
+     
+	 <%=render 'menu' %> 
+	 
         <main class="col overflow-auto h-100">
             <div class="bg-light border rounded-3 p-3">
                 <h2>Benvenuto</h2>
@@ -70,7 +21,7 @@
 				 <img src="https://i.ibb.co/MkPBTnd/Whats-App-Image-2021-08-05-at-11-17-04.jpg" alt="user" width="60" height="60">
                 <h4>Grazie</h4>
                 <p>Grazie per essere passato.</p><hr />
-</div>
+			</div>
         </main>
     </div>
 </div>

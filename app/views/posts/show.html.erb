@@ -1,0 +1,39 @@
+<%= stylesheet_pack_tag 'projects', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_pack_tag 'hello', 'data-turbolinks-track': 'reload' %>
+
+<header class="py-3 mb-4 border-bottom shadow">
+    <div class="container-fluid align-items-center d-flex ">
+       
+    </div>
+</header>
+
+<div class="container-fluid ">
+    <div class="row">
+	 
+	 <div class="col-sm-3 ">
+	 <%=render 'menu' %> 
+	  </div>
+	  
+     <main class="col-sm-9 ">
+            <div class="bg-light border rounded-3 p-3">
+			
+                <h2>  <%= @post.title %> </h2>
+				
+                <hr />
+				<p>
+				 <%= @post.body %>
+				</p>
+			</div>
+        </main>
+    </div>
+</div>
+
+
+
+<!--
+DA METTERE LA CONDIZIONE SE IL CONTENT WRITER è LOGGATO
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
+-->

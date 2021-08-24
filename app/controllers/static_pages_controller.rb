@@ -12,7 +12,22 @@ class StaticPagesController < ApplicationController
   end
   
   def projects
-	@varrub="ciao ciao"
+  
+	    @posts = Post.all
+		@families = Array.new
+		@posts.each do |post_s|
+		
+			print(post_s.family_name.to_s+"\n")
+			if (post_s.family==true)
+				if not @families.include?(post_s.family_name.to_s)
+					@families.push(post_s.family_name.to_s)
+				end
+			end
+			
+		end
+		
+		print(@families)
+		
   end
   
   def draw_tree_submit

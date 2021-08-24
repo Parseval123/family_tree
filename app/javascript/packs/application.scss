@@ -1,4 +1,4 @@
-       #intro {
+ #intro {
         background-image: url("https://i.ibb.co/H2cbZs1/ancientfamily.jpg");
 		height: 100vh;
 		background-position: center;
@@ -25,6 +25,7 @@
 	  
 	  .text-white{
 		  
+		  font-family: "1980-registers";
 		  background-color: rgba(0, 0, 0, 0.8);
 		  padding-left: 15px;
 		  padding-top: 15px;
@@ -68,5 +69,6 @@
   margin-right: .1rem;
 }
 
-// Import Bootstrap v5  
+
 @import "~bootstrap/scss/bootstrap";  
+@import "./actiontext.scss";
