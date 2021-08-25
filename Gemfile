@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'webpacker', '~> 5.0'  
 gem 'chartkick'
 gem 'gon'
+gem "aws-sdk-s3", require: false
 
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
