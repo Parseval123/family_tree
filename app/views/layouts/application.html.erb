@@ -42,6 +42,9 @@
 						 <li class="nav-item">
 						<%= link_to "Attività", static_pages_projects_path %>
 					  </li>
+					  <% if admin_signed_in? %>
+						<li class="nav-item"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+					<% end %>
 				</ul>
 				<ul class="nav navbar-nav ml-auto w-100 justify-content-end text-center">
 					<li class="nav-item"><a class="nav-link" href="https://m.facebook.com/chissdaquin/"><i class="fab fa-facebook-f"></i></a></li>

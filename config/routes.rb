@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
   
+  devise_scope :admin do
+    get "/sign_in" => "devise/sessions#new" # custom path to login/sign_in
+    get "/sign_up" => "devise/registrations#new", as: "new_admin_registration" # custom path to sign_up/registration
+  end
+  
+  devise_for :admins, :skip => [:registrations]
+	  
   resources :posts
   root to: "static_pages#home"
   #root to: "posts#index"
@@ -12,7 +19,6 @@ Rails.application.routes.draw do
   # routes for elders 
   get 'static_pages/vincenzo_tomassi'
   
-  devise_for :admins
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   
