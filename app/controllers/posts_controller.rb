@@ -32,7 +32,7 @@ class PostsController < ApplicationController
 		#####################################################
 		@couples = Hash.new
 		
-		#@families = @families.sort
+		@families = @families.sort
 		
 		@families.each do |family_soprannome|
 			buff_post = Array.new
