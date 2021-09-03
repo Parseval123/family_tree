@@ -1,4 +1,5 @@
-<%= form_with(model: post) do |form| %>
+
+	<%= form_with(model: post) do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -14,23 +15,25 @@
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
-  
+  <hr>
   <div class="field">
     <%= form.label :family? %>
      <%= form.check_box :family %>
   </div>
-  
+  <hr>
   <div class="field">
     <%= form.label :family_name %>
     <%= form.text_field :family_name %>
   </div>
-
+  <hr>
   <div class="field">
     <%= form.label :body %>
     <%= form.rich_text_area :body %>
   </div>
-
+  <hr>
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+  
+
