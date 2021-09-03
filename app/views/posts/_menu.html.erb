@@ -29,19 +29,18 @@
 					</li> -->
 					
 					<li>
-						<% @families.each do |family_soprannome| %>
+						<% @couples.each do |family_soprannome, post_array| %>
 							<button type="button" class="btn bg-transparent dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 								<%= family_soprannome %>
 							</button>
 						
 								<ul class="dropdown-menu">
-									<li><a class="dropdown-item">Albero Genealogico</a></li>
-									<li><hr class="dropdown-divider"></li>
-								<% @posts.each do |post| %>
+							
+								<% post_array.each do |post| %>
 									
-									<% if (family_soprannome==post.family_name.to_s and post.family==true) %> 	
+									
 										<li><a class="dropdown-item"><%= link_to "#{post.title.to_s}", post_path(:id => post.id.to_i) %></a></li>
-									 <% end %>
+									
 									 
 								<% end %>
 								</ul>

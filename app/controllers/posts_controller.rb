@@ -14,12 +14,12 @@ class PostsController < ApplicationController
 	@post.save
 	
 	#gestione menu laterale 
-	 @posts = Post.all
-	 @posts = @posts.sort()
+	
+	    @posts = Post.all
 		@families = Array.new
 		@posts.each do |post_s|
 		
-			print(post_s.title.to_s+"\n")
+			#print(post_s.family_name.to_s+"\n")
 			if (post_s.family==true)
 				if not @families.include?(post_s.family_name.to_s)
 					@families.push(post_s.family_name.to_s)
@@ -28,8 +28,36 @@ class PostsController < ApplicationController
 			
 		end
 		
-		print("inside show controller di post\n")
-		print(@families)
+		#print(@families)
+		#####################################################
+		@couples = Hash.new
+		
+		@families.each do |family_soprannome|
+			buff_post = Array.new
+				@posts.each do |post|
+					if (family_soprannome==post.family_name.to_s and post.family==true)
+						buff_post.push(post)
+					end
+				end
+			
+			buff_post = buff_post.sort_by{|obj| obj.id}
+			
+			#gestione albero come primo elemento del dropdown menu
+			family_tree = buff_post.find {|e| e.title == "Albero Genealogico"}
+			print("TEST FAMILY TREEE ===> "+family_tree.to_s)
+			buff_post.delete(family_tree)
+			
+			print("################buffpost###################")
+			print(buff_post)
+			if not(family_tree==nil)
+				buff_post.unshift(family_tree)
+			end
+			print("################buffpost###################")
+			
+		@couples[family_soprannome] = buff_post
+		print(@couples)
+		
+		end
 	
   end
 

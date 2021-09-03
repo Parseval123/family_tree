@@ -17,7 +17,7 @@ class StaticPagesController < ApplicationController
 		@families = Array.new
 		@posts.each do |post_s|
 		
-			print(post_s.family_name.to_s+"\n")
+			#print(post_s.family_name.to_s+"\n")
 			if (post_s.family==true)
 				if not @families.include?(post_s.family_name.to_s)
 					@families.push(post_s.family_name.to_s)
@@ -27,6 +27,37 @@ class StaticPagesController < ApplicationController
 		end
 		
 		print(@families)
+		#####################################################
+		@couples = Hash.new
+		
+		@families.each do |family_soprannome|
+			buff_post = Array.new
+				@posts.each do |post|
+					if (family_soprannome==post.family_name.to_s and post.family==true)
+						buff_post.push(post)
+					end
+				end
+			
+			#sorting by id per mantenere omogeneo l'ordine degli elementi nel menu ad eccezione dell'albero che compare in top.
+			buff_post = buff_post.sort_by{|obj| obj.id}
+			
+			#gestione albero come primo elemento del dropdown menu
+			family_tree = buff_post.find {|e| e.title == "Albero Genealogico"}
+			print("TEST FAMILY TREEE ===> "+family_tree.to_s)
+			buff_post.delete(family_tree)
+			
+			print("################buffpost###################")
+			print(buff_post)
+			if not(family_tree==nil)
+				#unshift porta in prima posizione l'elemente family tree ovvero il post dal titolo Albero Genealogico se esiste
+				buff_post.unshift(family_tree)
+			end
+			print("################buffpost###################")
+
+		@couples[family_soprannome] = buff_post
+		print(@couples)
+		
+		end
 		
   end
   
