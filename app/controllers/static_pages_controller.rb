@@ -29,6 +29,7 @@ class StaticPagesController < ApplicationController
 		print(@families)
 		#####################################################
 		@couples = Hash.new
+		@families = @families.sort
 		
 		@families.each do |family_soprannome|
 			buff_post = Array.new

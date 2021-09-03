@@ -32,6 +32,8 @@ class PostsController < ApplicationController
 		#####################################################
 		@couples = Hash.new
 		
+		#@families = @families.sort
+		
 		@families.each do |family_soprannome|
 			buff_post = Array.new
 				@posts.each do |post|
@@ -40,6 +42,7 @@ class PostsController < ApplicationController
 					end
 				end
 			
+			@families = @families
 			buff_post = buff_post.sort_by{|obj| obj.id}
 			
 			#gestione albero come primo elemento del dropdown menu
