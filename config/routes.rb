@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'static_pages/projects'
   get 'static_pages/shop'
   get 'static_pages/draw_tree_submit'
+  get 'static_pages/manage_over_hit'
   post 'static_pages/draw_tree_render'
   get 'static_pages/draw_tree_render' => 'static_pages/draw_tree_submit'
   # routes for elders 

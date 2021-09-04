@@ -1,7 +1,7 @@
  #intro {
         background-image: url("https://i.ibb.co/H2cbZs1/ancientfamily.jpg");
-		height: 100vh;
-		background-position: center;
+		height: 90vh;
+		background-position: fixed;
 		background-size: cover;
       }
 	  
@@ -11,6 +11,14 @@
         height: 100%;
     }
 }
+
+.fa-facebook {
+  color: white;
+}
+
+	 #insta{
+	 color: white;
+	 } 
 	  
 	a:-webkit-any-link {
  
@@ -26,11 +34,7 @@
 	  .text-white{
 		  
 		  font-family: "1980-registers";
-		  background-color: rgba(0, 0, 0, 0.8);
-		  padding-left: 15px;
-		  padding-top: 15px;
-		  padding-right: 15px;
-		  padding-bottom: 15px;
+		  background-color: rgba(0, 0, 0, 0.65);
 		  
 	  }
 	  

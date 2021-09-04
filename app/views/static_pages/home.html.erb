@@ -9,18 +9,93 @@
 	
 	<% else %>
 
-  <header>
-	<div id="intro" class="bg-image shadow-2-strong">
-        <div class="container d-flex align-items-center justify-content-center text-center h-100">
-            <div class="text-white">
-            <h1 class="mb-3">Chiss D&rsquo;Aquin</h1>
-            <h5 class="mb-4">Siamo un gruppo di ragazzi che si occupa di storia e genealogia della città di Aquino.</br> 
-			                 Con le nostre ricerche abbiamo ricollegato molteplici famiglie e crediamo che </br>
-							 La chiave per valorizzare il nostro futuro è quella di comprendere il passato.</h5>
-            </div>
+	
+
+ 
+	
+	
+	
+	
+	
+<div id="intro" class="bg-image shadow-2-strong">
+    <div class="text-white">
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6 text-center border-dark border-bottom" >
+  
+				<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="row"  >
+								<div class="col-sm-3"></div>
+								<div class="col-sm-6">
+								<%= image_tag "chissdaquin.png", style: 'height:300px;width:300px;margin-bottom:10px;' %>
+								</div>
+								<div class="col-sm-3"></div>
+							</div>
+							<div class="row">
+								<div class="carousel-caption "></div>
+									<h5>BENVENUTI</h5>
+									<p>Siamo un gruppo di ragazzi che si occupa di storia e genealogia della città di Aquino.</br> 
+									Con le nostre ricerche abbiamo ricollegato molteplici famiglie e crediamo che </br>
+									La chiave per valorizzare il nostro futuro è quella di comprendere il passato.</p>
+								</div>
+							</div>
+						<div class="carousel-item">
+							<div class="row">
+								<div class="col-sm-3"></div>
+								<div class="col-sm-6">
+									<%= image_tag "aquino_ml.jpg", style: 'height:300px;width:300px;margin-bottom:10px;margin-top:20px;' %>
+								</div>
+								<div class="col-sm-3"></div>
+							</div>
+							<div class="row">
+								<div class="carousel-caption d-none d-md-block">
+							</div>
+        <h5>Anche sui Social</h5>
+        <p>Seguiteci anche sui social </br> 
+		   vi aspettiamo sulla nostra pagina </br> 
+		   <a href="https://m.facebook.com/chissdaquin/"><i class="fab fa-facebook fa-7x"></i></a> </br>
+		   <a class="nav-link" href="https://www.instagram.com/chissdaquin/"><i id="insta" class="fab fa-instagram fa-7x"></i></a></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row"  >
+								<div class="col-sm-3"></div>
+								<div class="col-sm-6">
+								<%= image_tag "pennacalamaio.jpg", style: 'height:200px;width:200px;margin-top:10px;' %>
+								</div>
+								<div class="col-sm-3"></div>
+							</div>
+							<div class="row">
+								<div  id="body_post_preview" class="carousel-caption"></div>
+									<h5><%= @posts[0].title %>
+									<%= @posts[0].body %>
+								</div>
+							</div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  
+			</div>
+			<div class="col-sm-3"></div>
 		</div>
 	</div>
-  </header>
+</div>
+							 
+
+							 
+            
+	
+
  
 
 

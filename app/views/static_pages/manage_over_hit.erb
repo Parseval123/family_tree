@@ -1,0 +1,13 @@
+MANAGE OVER HIT </br>
+<%= form_tag(static_pages_draw_tree_render_path, :method => :post) do %>
+<div class="field">
+    <%= label_tag "Seleziona l'antenato corretto" %><br>
+    <%= select_tag "whatever",options_for_select(@result_array) %> </br>
+	 <%= hidden_field_tag 'generation_length', @generation_length  %>
+	 <%= hidden_field_tag 'fullname', @fullname  %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Submit", class: "btn btn-primary"  %>
+  </div>
+<%end%>
+	
