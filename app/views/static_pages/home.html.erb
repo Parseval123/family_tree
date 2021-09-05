@@ -35,7 +35,7 @@
 							</div>
 							<div class="row">
 								<div class="carousel-caption "></div>
-									<h5>BENVENUTI</h5>
+									<div class="larger">BENVENUTI</div>
 									<p>Siamo un gruppo di ragazzi che si occupa di storia e genealogia della città di Aquino.</br> 
 									Con le nostre ricerche abbiamo ricollegato molteplici famiglie e crediamo che </br>
 									La chiave per valorizzare il nostro futuro è quella di comprendere il passato.</p>
@@ -52,24 +52,25 @@
 							<div class="row">
 								<div class="carousel-caption d-none d-md-block">
 							</div>
-        <h5>Anche sui Social</h5>
+        <div class="larger">Anche sui Social</div>
         <p>Seguiteci anche sui social </br> 
 		   vi aspettiamo sulla nostra pagina </br> 
-		   <a href="https://m.facebook.com/chissdaquin/"><i class="fab fa-facebook fa-7x"></i></a> </br>
-		   <a class="nav-link" href="https://www.instagram.com/chissdaquin/"><i id="insta" class="fab fa-instagram fa-7x"></i></a></p>
+		   <a href="https://m.facebook.com/chissdaquin/"><i class="fab fa-facebook fa-3x"></i></a> </br>
+		   <a class="nav-link" href="https://www.instagram.com/chissdaquin/"><i id="insta" class="fab fa-instagram fa-3x"></i></a></p>
       </div>
     </div>
     <div class="carousel-item">
       <div class="row"  >
 								<div class="col-sm-3"></div>
 								<div class="col-sm-6">
-								<%= image_tag "pennacalamaio.jpg", style: 'height:200px;width:200px;margin-top:10px;' %>
+								<%= image_tag "pennacalamaio.jpg", style: 'height:200px;width:200px;margin-top:30px;margin-bottom:30px;' %>
 								</div>
 								<div class="col-sm-3"></div>
 							</div>
 							<div class="row">
 								<div  id="body_post_preview" class="carousel-caption"></div>
-									<h5><%= @posts[0].title %>
+									<div class="larger"><%= @posts[0].title %></br><hr>
+									il: <%= @posts[0].created_at%></br><hr></div>
 									<%= @posts[0].body %>
 								</div>
 							</div>
