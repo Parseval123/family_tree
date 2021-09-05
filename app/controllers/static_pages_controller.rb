@@ -2,8 +2,8 @@ require "csv"
 
 class StaticPagesController < ApplicationController
   def home
-  
-	@posts = Post.all.sort_by(&:views)
+
+	@posts = Post.all.sort_by { |str| -str.views }
 	print(@posts)
 	print("TEST #1 => "+@posts[0].to_s+"\n")
 		print("TEST #2 => "+@posts[0].title+"\n")

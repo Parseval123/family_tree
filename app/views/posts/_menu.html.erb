@@ -39,7 +39,7 @@
 								<% post_array.each do |post| %>
 									
 									
-										<li><a class="dropdown-item"><%= link_to "#{post.title.to_s}", post_path(:id => post.id.to_i) %></a></li>
+										<li><%= link_to "#{post.title.to_s}", post_path(:id => post.id.to_i), {:class => "dropdown-item"} %></li>
 									
 									 
 								<% end %>

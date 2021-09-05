@@ -1,3 +1,26 @@
+ @font-face {
+  font-family: "our custom font";
+  src: url('TYPEWR_B.TTF');
+}
+ 
+ p,h1,h2,button,nav{
+	 
+	  font-family: "our custom font";
+	  font-size: 150%;
+	 
+ }
+ 
+ nav{
+	
+ }
+ 
+ .trix-content{
+	 
+	 font-family: "our custom font";
+	 font-size: 150%;
+	 
+ }
+ 
  #intro {
         background-image: url("https://i.ibb.co/H2cbZs1/ancientfamily.jpg");
 		height: 90vh;
@@ -33,14 +56,23 @@
 	  
 	  .text-white{
 		  
-		  font-family: "1980-registers";
+		  font-family: "our custom font";
 		  background-color: rgba(0, 0, 0, 0.65);
+		  font-size: 100%;
 		  
 	  }
 	  
+	  .btn{
+		  
+		  font-family: "our custom font";
+		  font-size: 100%;
+		  
+	  }
 	  
 	  .nav-item{
-		  padding-left:15px!important;
+			padding-left:15px!important;
+		    font-family: "our custom font";
+			font-size: 100%;
 	  }
 
 /* Sidebar */
@@ -71,8 +103,15 @@
   left: 100%;
   margin-left: .1rem;
   margin-right: .1rem;
+
 }
 
+ul.dropdown-menu{
+	
+  font-family: "our custom font";
+  font-size: 100%;
+	
+}
 
 @import "~bootstrap/scss/bootstrap";  
 @import "./actiontext.scss";
