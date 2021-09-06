@@ -1,6 +1,8 @@
 require "csv"
 
 class StaticPagesController < ApplicationController
+before_action :authenticate_admin!, only: [:draw_tree_submit, :draw_tree_render, :manage_over_hit]
+
   def home
 
 	@posts = Post.all.sort_by { |str| -str.views }
