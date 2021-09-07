@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= full_title(yield(:title)) %></title>
+    <%= favicon_link_tag asset_path('android-icon-36x36.png') %>
+    <title> <%= full_title(yield(:title)) %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
 	<%= include_gon %>
     <%= csrf_meta_tags %>
